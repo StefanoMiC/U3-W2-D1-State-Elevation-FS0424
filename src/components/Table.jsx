@@ -13,9 +13,13 @@ class Table extends Component {
     return (
       <>
         <ListGroup>
+          {/* essendo che changeSelected è una prop contenente il riferimento ad una funzione, 
+          può essere trattata lei stessa come la funzione che contiene, quindi possiamo tranquillamente
+          chiamarla passandole un argomento */}
           <ListGroup.Item onClick={() => this.props.changeSelected("Uno")} className={this.checkSelected("Uno")}>
             Uno
           </ListGroup.Item>
+          {/* l'argomento cambia per le diverse esecuzioni di questa funzione */}
           <ListGroup.Item onClick={() => this.props.changeSelected("Due")} className={this.checkSelected("Due")}>
             Due
           </ListGroup.Item>
